@@ -1,1 +1,1 @@
-# a website helppful to tailors and make customer-tailor interactions
+# a website helpful to tailors and make customer-tailor interactions
