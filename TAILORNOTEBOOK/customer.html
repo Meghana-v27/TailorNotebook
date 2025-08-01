@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Details - Tailor's Notebook</title>
+  <link rel="stylesheet" href="customer.css" />
+</head>
+<body>
+  <div class="background-image"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <!-- Form Container -->
+  <div class="container">
+    <section class="customer-form">
+      <h2>Enter Your Details</h2>
+
+      <!-- Message Area -->
+      <div id="message-box">
+        <p id="success-msg" class="success-message" style="display: none;">Submitted successfully!</p>
+      </div>
+
+      <form id="customer-form" action="gender.html" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Gmail" required />
+        <input type="text" name="address" placeholder="Your Address" required />
+        <input type="tel" name="phone" placeholder="Your Phone Number" required pattern="[0-9]{10}" />
+        <input type="date" name="stitch_date" required />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </div> 
+
+  <!-- Script to handle success message from URL -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === 'true') {
+      document.getElementById('success-msg').style.display = 'block';
+      setTimeout(() => {
+        window.location.href = 'gender.html';
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Female Selection - Tailor's Notebook</title>
+    <link rel="stylesheet" href="females.css">
+</head>
+<body>
+    <div class="background-image"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="signin.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Choose Your Dress</h2>
+
+        <!-- Grid for suits -->
+        <div class="dress-grid">
+            <div class="dress-item" onclick="showMeasurementForm()">
+                <img src="saree.jpg" alt="Saree">
+                <p>saree</p>
+            </div>
+            <div class="dress-item" onclick="showMeasurementForm()">
+                <img src="skirt.jpg" alt="skirt">
+                <p>skirt</p>
+            </div>
+            <div class="dress-item" onclick="showMeasurementForm()">
+              <img src="jeansf.jpeg" alt="Jeans">
+              <p>Jeans</p>
+          </div>
+          <div class="dress-item" onclick="showMeasurementForm()">
+            <img src="lehanga.webp" alt="Lehanga">
+            <p>Lehanga</p>
+        </div>
+        </div>
+
+        <!-- Measurement Form (hidden initially) -->
+        <div id="measurement-form" class="measurement-form">
+            <h3>Enter Your Measurements</h3>
+            <form action="suit.php" method="POST">
+
+                <label for="name">Your Name (must match your previous entry):</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="chest">Chest Measurement:</label>
+                <input type="number" id="chest" name="chest" placeholder="Chest in inches" required>
+
+                <label for="waist">Waist Measurement:</label>
+                <input type="number" id="waist" name="waist" placeholder="Waist in inches" required>
+
+                <label for="hips">Hips Measurement:</label>
+                <input type="number" id="hips" name="hips" placeholder="Hips in inches" required>
+
+                <label for="inseam">Inseam Measurement:</label>
+                <input type="number" id="inseam" name="inseam" placeholder="Inseam in inches" required>
+
+                <label for="message">Additional Notes:</label>
+                <textarea id="message" name="message" placeholder="Any additional notes" rows="4"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showMeasurementForm() {
+            document.getElementById('measurement-form').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

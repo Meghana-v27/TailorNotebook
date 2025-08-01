@@ -1,0 +1,149 @@
+/* Reset and Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Background Image */
+.background-image {
+    background: url('bg3.jpg') no-repeat center center/cover;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(0.3);
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    gap: 30px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Container for Suit Grid and Form */
+.container {
+    max-width: 900px;
+    margin: 5% auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Grid Layout */
+.dress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dress-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dress-item:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-5px);
+}
+
+.dress-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.dress-item p {
+    color: #fff;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Measurement Form */
+.measurement-form {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.measurement-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.measurement-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.measurement-form input,
+.measurement-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.measurement-form input::placeholder,
+.measurement-form textarea::placeholder {
+    color: #ccc;
+}
+
+.measurement-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.measurement-form button:hover {
+    background-color: #444;
+}

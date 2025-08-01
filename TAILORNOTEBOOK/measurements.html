@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Measurements - Tailor's Notebook</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Tailor's Notebook</div>
+    </nav>
+  </header>
+  
+  <section class="measurements">
+    <div class="measurements-container">
+      <h2>Enter your measurements for Shirt</h2>
+      <form action="/submit" method="POST">
+        <input type="text" name="chest" placeholder="Chest (inches)" required>
+        <input type="text" name="waist" placeholder="Waist (inches)" required>
+        <input type="text" name="hips" placeholder="Hips (inches)" required>
+        <input type="text" name="length" placeholder="Length (inches)" required>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

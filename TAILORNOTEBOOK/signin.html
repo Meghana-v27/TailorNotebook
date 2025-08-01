@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tailor's Notebook</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="signin.html">Home</a></li>
+            <li><a href="Aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Quote Section -->
+        <section class="quote">
+            <h1>"Sewing is not just a craft, it's a way to create something beautiful from nothing."</h1>
+            <p>- Tailor's Wisdom</p>
+        </section>
+
+        <!-- Login Box Section -->
+        <section class="login-box">
+            <header>
+                <div class="logo">Tailor's Notebook</div>
+            </header>
+
+            <h2>Login to Your Account</h2>
+            <!-- Login Form -->
+            <form id="login-form">
+                <div class="form-group">
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Login</button>
+                </div>
+            </form>
+            
+            <!-- Sign up Link -->
+            <div class="signup-link">
+                <p>Don't have an account? <a href="/signup">Sign up here</a></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Hardcoded credentials
+        const validEmail = "meghana45@gmail.com";
+        const validPassword = "msd0";
+
+        // Handle the login form submission
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get the values from the form
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Check if the entered email and password match the hardcoded ones
+            if (username === validEmail && password === validPassword) {
+                alert("Login successful! Redirecting to customer page.");
+                window.location.href = "customer.html";  // Redirect to customer page on success
+            } else {
+                alert("Invalid email or password.");
+            }
+        });
+    </script>
+</body>
+</html>

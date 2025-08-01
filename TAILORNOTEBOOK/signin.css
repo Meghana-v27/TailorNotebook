@@ -1,0 +1,157 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+  background-image: url('bg5.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 15px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #e67e22;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #e67e22;
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  margin-top: 80px; /* To prevent navbar from covering the content */
+}
+
+/* Quote Styling */
+.quote {
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #040404;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.quote p {
+  font-size: 22px;
+  color: #0b0b0b;
+}
+
+/* Login Box Styling */
+.login-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-box header .logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #f39c12;
+  margin-bottom: 20px;
+}
+
+/* Form Heading */
+.login-box h2 {
+  color: #f39c12;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #f39c12;
+  outline: none;
+}
+
+/* Submit Button */
+button {
+  background-color: #f39c12;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e67e22;
+}
+
+/* Sign-Up Link */
+.signup-link {
+  margin-top: 20px;
+  color: #bdc3c7;
+}
+
+.signup-link a {
+  color: #f39c12;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

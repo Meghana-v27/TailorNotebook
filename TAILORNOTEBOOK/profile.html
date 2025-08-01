@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - Tailor's Notebook</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Tailor's Notebook</div>
+    </nav>
+  </header>
+
+  <section class="profile">
+    <div class="profile-container">
+      <h2>Hello, <span id="username"></span>!</h2>
+      <form id="gender-form" method="POST">
+        <label>Select Gender:</label>
+        <select name="gender" required>
+          <option value="">-- Choose --</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <button type="submit" class="submit-btn">Next</button>
+      </form>
+    </div>
+  </section>
+  <script>
+    const genderForm = document.getElementById("gender-form");
+
+    genderForm.addEventListener("submit", (event) => {
+      event.preventDefault(); 
+
+      const genderSelect = genderForm.querySelector("select[name='gender']");
+      const selectedGender = genderSelect.value;
+
+      if (selectedGender === "Female") {
+        window.location.href = "female.html";
+      } else {
+        window.location.href = "male.html";
+      }
+    });
+  </script>
+</body>
+</html>
